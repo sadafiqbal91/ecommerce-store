@@ -29,7 +29,7 @@ export default function Navbar() {
           {user && <Link to="/orders" onClick={close}>My Orders</Link>}
           {user ? (
             <button className="link-btn" onClick={() => { logout(); close(); }}>
-              localStorage.removeItem("user"); location.reload();
+                            Logout ({(user.name || "User").split(" ")[0]})
             </button>
           ) : (
             <Link to="/login" onClick={close}>Login</Link>
